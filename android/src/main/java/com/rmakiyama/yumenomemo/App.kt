@@ -1,4 +1,4 @@
-package com.rmakiyama.yumenomemo.android
+package com.rmakiyama.yumenomemo
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

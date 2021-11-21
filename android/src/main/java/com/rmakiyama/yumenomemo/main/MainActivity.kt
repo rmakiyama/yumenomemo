@@ -1,4 +1,4 @@
-package com.rmakiyama.yumenomemo.android.main
+package com.rmakiyama.yumenomemo.main
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

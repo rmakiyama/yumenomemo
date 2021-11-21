@@ -1,4 +1,4 @@
-package com.rmakiyama.yumenomemo.android.main
+package com.rmakiyama.yumenomemo.main
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

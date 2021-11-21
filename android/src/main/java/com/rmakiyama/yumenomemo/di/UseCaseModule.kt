@@ -1,6 +1,5 @@
-package com.rmakiyama.yumenomemo.android.di
+package com.rmakiyama.yumenomemo.di
 
-import com.rmakiyama.yumenomemo.di.Container
 import com.rmakiyama.yumenomemo.usecase.GetYumenomemoListUseCase
 import dagger.Module
 import dagger.Provides
