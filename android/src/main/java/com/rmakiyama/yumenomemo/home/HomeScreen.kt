@@ -17,7 +17,7 @@ fun HomeScreen() {
     val viewModel: HomeViewModel = hiltViewModel()
     val state by viewModel.state.collectAsState()
 
-    LaunchedEffect(true) { viewModel.load() }
+    LaunchedEffect(true) { viewModel.dispatch(HomeViewModel.Action.Launch) }
 
     HomeScreen(
         yumenomemoList = state.yumenomemoList,
