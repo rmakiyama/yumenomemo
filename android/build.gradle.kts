@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    compileSdk = 31
+    compileSdk = libs.versions.compileSdk.get().toInt()
     defaultConfig {
         applicationId = "com.rmakiyama.yumenomemo.android"
-        minSdk = 23
-        targetSdk = 31
+        minSdk = libs.versions.minSdk.get().toInt()
+        targetSdk = libs.versions.targetSdk.get().toInt()
         versionCode = 1
         versionName = "1.0"
     }
@@ -17,11 +17,20 @@ android {
             isMinifyEnabled = false
         }
     }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = libs.versions.compose.asProvider().get()
+    }
 }
 
 dependencies {
     implementation(project(":shared"))
-    implementation("com.google.android.material:material:1.4.0")
-    implementation("androidx.appcompat:appcompat:1.3.1")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.0")
+
+    implementation(libs.bundles.androidx)
+    implementation(libs.bundles.compose)
+    implementation(libs.bundles.compose.debug)
+
+    implementation(libs.bundles.android.test)
 }

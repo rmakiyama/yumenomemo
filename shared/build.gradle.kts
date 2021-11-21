@@ -34,7 +34,7 @@ kotlin {
         val androidTest by getting {
             dependencies {
                 implementation(kotlin("test-junit"))
-                implementation("junit:junit:4.13.2")
+                implementation(libs.bundles.android.test)
             }
         }
         val iosX64Main by getting
@@ -59,10 +59,10 @@ kotlin {
 }
 
 android {
-    compileSdk = 31
+    compileSdk = libs.versions.compileSdk.get().toInt()
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     defaultConfig {
-        minSdk = 23
-        targetSdk = 31
+        minSdk = libs.versions.minSdk.get().toInt()
+        targetSdk = libs.versions.targetSdk.get().toInt()
     }
 }

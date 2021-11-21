@@ -9,3 +9,5 @@ pluginManagement {
 rootProject.name = "yumenomemo"
 include(":android")
 include(":shared")
+
+enableFeaturePreview("VERSION_CATALOGS")
