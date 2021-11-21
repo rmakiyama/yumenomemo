@@ -3,6 +3,7 @@
     package="com.rmakiyama.yumenomemo.android">
 
     <application
+        android:name=".App"
         android:allowBackup="false"
         android:label="@string/app_name"
         android:supportsRtl="true"
