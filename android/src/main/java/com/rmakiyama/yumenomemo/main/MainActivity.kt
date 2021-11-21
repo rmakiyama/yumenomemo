@@ -20,6 +20,7 @@ import androidx.core.view.WindowCompat
 import com.google.accompanist.insets.ProvideWindowInsets
 import com.google.accompanist.insets.navigationBarsPadding
 import com.google.accompanist.insets.statusBarsPadding
+import com.rmakiyama.yumenomemo.theme.YumenomemoTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -34,20 +35,22 @@ class MainActivity : ComponentActivity() {
         setContent {
             val list by viewModel.yumenomemoList.collectAsState()
 
-            ProvideWindowInsets(consumeWindowInsets = false) {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    LazyColumn(
-                        modifier = Modifier
-                            .statusBarsPadding()
-                            .navigationBarsPadding(),
-                        contentPadding = PaddingValues(16.dp),
-                        verticalArrangement = Arrangement.spacedBy(8.dp),
+            YumenomemoTheme {
+                ProvideWindowInsets(consumeWindowInsets = false) {
+                    Surface(
+                        modifier = Modifier.fillMaxSize(),
+                        color = MaterialTheme.colorScheme.background
                     ) {
-                        items(list, key = { it.id.id }) { yumenomemo ->
-                            Text(text = yumenomemo.detail)
+                        LazyColumn(
+                            modifier = Modifier
+                                .statusBarsPadding()
+                                .navigationBarsPadding(),
+                            contentPadding = PaddingValues(16.dp),
+                            verticalArrangement = Arrangement.spacedBy(8.dp),
+                        ) {
+                            items(list, key = { it.id.id }) { yumenomemo ->
+                                Text(text = yumenomemo.detail)
+                            }
                         }
                     }
                 }
