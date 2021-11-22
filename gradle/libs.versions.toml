@@ -1,5 +1,6 @@
 [versions]
 kotlin = "1.5.31"
+kotlinx-datetime = "0.3.1"
 android-plugin = "7.0.3"
 lifecycle = "2.4.0"
 compose = "1.1.0-beta03"
@@ -15,6 +16,8 @@ targetSdk = "31"
 
 [libraries]
 kotlin-pluginGradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
 
 android-pluginGradle = { module = "com.android.tools.build:gradle", version.ref = "android-plugin" }
 androidx-core = "androidx.core:core-ktx:1.7.0"

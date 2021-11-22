@@ -27,6 +27,7 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation(libs.sqldelight.runtime)
+                implementation(libs.kotlinx.datetime)
             }
         }
         val commonTest by getting {
