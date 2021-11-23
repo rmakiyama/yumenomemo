@@ -10,6 +10,5 @@ data class Yumenomemo(
     val id: YumeId,
     val detail: String,
     val impression: String,
-    val emotion: Int,
     val dreamedAt: LocalDateTime,
 )
