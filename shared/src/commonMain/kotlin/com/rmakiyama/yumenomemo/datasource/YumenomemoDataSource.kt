@@ -14,22 +14,27 @@ internal class FakeYumenomemoDataSource : YumenomemoDataSource {
             Yumenomemo(
                 id = YumeId(Random.nextInt()),
                 detail = getRandomString(),
+                impression = getRandomString(),
             ),
             Yumenomemo(
                 id = YumeId(Random.nextInt()),
                 detail = getRandomString(),
+                impression = getRandomString(),
             ),
             Yumenomemo(
                 id = YumeId(Random.nextInt()),
                 detail = getRandomString(),
+                impression = getRandomString(),
             ),
             Yumenomemo(
                 id = YumeId(Random.nextInt()),
                 detail = getRandomString(),
+                impression = getRandomString(),
             ),
             Yumenomemo(
                 id = YumeId(Random.nextInt()),
                 detail = getRandomString(),
+                impression = getRandomString(),
             ),
         )
     }

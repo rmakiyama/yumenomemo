@@ -1,6 +1,9 @@
 package com.rmakiyama.yumenomemo.model
 
+import kotlinx.datetime.Clock
 import kotlinx.datetime.LocalDateTime
+import kotlinx.datetime.TimeZone
+import kotlinx.datetime.toLocalDateTime
 import kotlin.jvm.JvmInline
 
 @JvmInline
@@ -10,5 +13,7 @@ data class Yumenomemo(
     val id: YumeId,
     val detail: String,
     val impression: String,
-    val dreamedAt: LocalDateTime,
-)
+) {
+    val dreamedAt: LocalDateTime =
+        Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault())
+}
