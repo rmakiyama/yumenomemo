@@ -11,7 +11,7 @@ import dagger.hilt.components.SingletonComponent
 internal class UseCaseModule {
 
     @Provides
-    fun provideGetYumenomemoList(): GetYumenomemoListUseCase {
-        return Container.getYumenomemoList
+    fun provideGetYumenomemoList(sharedModule: SharedModule): GetYumenomemoListUseCase {
+        return sharedModule.getYumenomemoList
     }
 }
