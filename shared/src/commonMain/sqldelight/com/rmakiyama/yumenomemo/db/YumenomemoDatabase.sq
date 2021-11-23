@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS yumenomemo (
+    id INTEGER AS Int PRIMARY KEY AUTOINCREMENT,
+    detail TEXT NOT NULL,
+    impression TEXT NOT NULL,
+    dreamed_at TEXT NOT NULL
+);
+
+selectAll:
+SELECT *
+FROM yumenomemo;
