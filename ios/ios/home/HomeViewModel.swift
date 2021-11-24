@@ -9,7 +9,7 @@ class HomeViewModel: ObservableObject {
     @Published var state = HomeViewState()
     
     init(
-        getYumenomemoList: GetYumenomemoListUseCase = Container.shared.getYumenomemoList
+        getYumenomemoList: GetYumenomemoListUseCase = Container.shared.getYumenomemoListUseCase()
     ) {
         self.getYumenomemoList = getYumenomemoList
     }

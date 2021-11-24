@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS yumenomemo (
+    id INTEGER AS Int PRIMARY KEY AUTOINCREMENT,
+    detail TEXT NOT NULL,
+    impression TEXT NOT NULL,
+    dreamed_at TEXT NOT NULL
+);
+
+-- FIXME: for fake
+INSERT INTO "yumenomemo" VALUES (1,'yume 1', 'yumeyume', '2021-11-23T21:00:00');
+INSERT INTO "yumenomemo" VALUES (2,'yume 2', 'yumeyume', '2021-11-23T21:00:00');
+INSERT INTO "yumenomemo" VALUES (3,'yume 3', 'yumeyume', '2021-11-23T21:00:00');
+INSERT INTO "yumenomemo" VALUES (4,'yume 4', 'yumeyume', '2021-11-23T21:00:00');
+INSERT INTO "yumenomemo" VALUES (5,'yume 5', 'yumeyume', '2021-11-23T21:00:00');
+INSERT INTO "yumenomemo" VALUES (6,'yume 6', 'yumeyume', '2021-11-23T21:00:00');
+INSERT INTO "yumenomemo" VALUES (7,'yume 7', 'yumeyume', '2021-11-23T21:00:00');
+INSERT INTO "yumenomemo" VALUES (8,'yume 8', 'yumeyume', '2021-11-23T21:00:00');
+
+selectAll:
+SELECT *
+FROM yumenomemo;

@@ -53,9 +53,9 @@ fun YumenomemoItemView(
 @Composable
 fun YumenomemoListViewPreview() {
     val list = listOf(
-        Yumenomemo(YumeId(1), "hoge"),
-        Yumenomemo(YumeId(1), "fuga"),
-        Yumenomemo(YumeId(1), "piyo"),
+        Yumenomemo(YumeId(1), "hoge", ""),
+        Yumenomemo(YumeId(1), "fuga", ""),
+        Yumenomemo(YumeId(1), "piyo", ""),
     )
     YumenomemoTheme {
         YumenomemoListView(

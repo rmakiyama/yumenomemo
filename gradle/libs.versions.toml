@@ -1,5 +1,6 @@
 [versions]
 kotlin = "1.5.31"
+kotlinx-datetime = "0.3.1"
 android-plugin = "7.0.3"
 lifecycle = "2.4.0"
 compose = "1.1.0-beta03"
@@ -7,6 +8,7 @@ compose-material3 = "1.0.0-alpha01"
 accompanist = "0.21.3-beta"
 coil = "1.4.0"
 hilt = "2.40"
+sqldelight = "1.5.2"
 
 compileSdk = "31"
 minSdk = "23"
@@ -14,6 +16,8 @@ targetSdk = "31"
 
 [libraries]
 kotlin-pluginGradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
 
 android-pluginGradle = { module = "com.android.tools.build:gradle", version.ref = "android-plugin" }
 androidx-core = "androidx.core:core-ktx:1.7.0"
@@ -39,6 +43,11 @@ coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
 hilt-android-pluginGradle = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "hilt" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
+
+sqldelight-pluginGradle = { module = "com.squareup.sqldelight:gradle-plugin", version.ref = "sqldelight" }
+sqldelight-runtime = { module = "com.squareup.sqldelight:runtime", version.ref = "sqldelight" }
+sqldelight-android-driver = { module = "com.squareup.sqldelight:android-driver", version.ref = "sqldelight" }
+sqldelight-native-driver = { module = "com.squareup.sqldelight:native-driver", version.ref = "sqldelight" }
 
 junit = "junit:junit:4.13.2"
 
