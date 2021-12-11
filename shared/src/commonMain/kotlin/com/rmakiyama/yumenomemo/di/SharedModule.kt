@@ -7,6 +7,8 @@ import com.rmakiyama.yumenomemo.repository.DefaultYumenomemoRepository
 import com.rmakiyama.yumenomemo.repository.YumenomemoRepository
 import com.rmakiyama.yumenomemo.usecase.GetYumenomemoList
 import com.rmakiyama.yumenomemo.usecase.GetYumenomemoListUseCase
+import com.rmakiyama.yumenomemo.usecase.WriteYumenomemo
+import com.rmakiyama.yumenomemo.usecase.WriteYumenomemoUseCase
 
 class SharedModule(val platform: Platform) {
 
@@ -20,4 +22,6 @@ class SharedModule(val platform: Platform) {
 
     val getYumenomemoList: GetYumenomemoListUseCase
         get() = GetYumenomemoList(repository = yumenomemoRepository)
+    val writeYumenomemo: WriteYumenomemoUseCase
+        get() = WriteYumenomemo(repository = yumenomemoRepository)
 }
