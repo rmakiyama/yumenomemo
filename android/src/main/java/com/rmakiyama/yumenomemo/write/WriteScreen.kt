@@ -53,7 +53,8 @@ fun WriteScreen(
         onDetailChanged = { viewModel.dispatch(UpdateDetail(it)) },
         onImpressionChanged = { viewModel.dispatch(UpdateImpression(it)) },
         onClickNavigationBack = { navigateUp() },
-        onClickSave = { viewModel.dispatch(Write) }
+        onClickSave = { viewModel.dispatch(Write) },
+        saveEnabled = state.saveEnabled,
     )
 }
 
@@ -65,6 +66,7 @@ private fun WriteScreen(
     onImpressionChanged: (String) -> Unit,
     onClickNavigationBack: () -> Unit,
     onClickSave: () -> Unit,
+    saveEnabled: Boolean,
 ) {
     Surface(
         modifier = Modifier
@@ -92,7 +94,8 @@ private fun WriteScreen(
                 onClick = onClickSave,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 24.dp)
+                    .padding(horizontal = 24.dp),
+                enabled = saveEnabled,
             ) {
                 Text(text = stringResource(R.string.button_write_yumenomemo))
             }

@@ -47,7 +47,9 @@ internal class WriteViewModel @Inject constructor(
     data class State(
         val detail: String = "",
         val impression: String = "",
-    )
+    ) {
+        val saveEnabled: Boolean = detail.isNotBlank()
+    }
 
     sealed class Action {
         object Write : Action()
