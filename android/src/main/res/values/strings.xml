@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ユメノメモ</string>
+
+    <string name="title_write_yumenomemo">🌙🛏📝</string>
+    <string name="label_write_yumenomemo_detail">どんなユメを見た？</string>
+    <string name="label_write_yumenomemo_impression">いまはどんなきもち？</string>
 </resources>

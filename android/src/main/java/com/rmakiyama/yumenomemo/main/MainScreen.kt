@@ -17,6 +17,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.google.accompanist.insets.navigationBarsPadding
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
+import com.rmakiyama.yumenomemo.Screen
 
 @ExperimentalFoundationApi
 @ExperimentalMaterial3Api
@@ -28,7 +29,7 @@ internal fun MainScreen() {
     Scaffold(
         floatingActionButton = {
             LargeFloatingActionButton(
-                onClick = { },
+                onClick = { navController.navigate(Screen.WriteYumenomemo.route) },
                 modifier = Modifier.navigationBarsPadding(),
                 shape = CircleShape,
             ) {
