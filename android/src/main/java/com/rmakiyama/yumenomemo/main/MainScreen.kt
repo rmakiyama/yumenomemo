@@ -1,6 +1,5 @@
 package com.rmakiyama.yumenomemo.main
 
-import android.util.Log
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.fadeIn
@@ -38,7 +37,6 @@ internal fun MainScreen() {
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = navBackStackEntry?.destination?.route
     val needsShowFab: Boolean = fabNeededRoutes.contains(currentRoute)
-    Log.d("MainScreen", "needsShowFab = $needsShowFab")
 
     Scaffold(
         floatingActionButton = {

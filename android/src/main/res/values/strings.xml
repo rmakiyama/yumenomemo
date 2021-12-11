@@ -5,4 +5,5 @@
     <string name="title_write_yumenomemo">🌙🛏📝</string>
     <string name="label_write_yumenomemo_detail">どんなユメを見た？</string>
     <string name="label_write_yumenomemo_impression">いまはどんなきもち？</string>
+    <string name="button_write_yumenomemo">ユメをメモ</string>
 </resources>
