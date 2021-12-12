@@ -8,7 +8,10 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.google.accompanist.insets.LocalWindowInsets
+import com.google.accompanist.insets.rememberInsetsPaddingValues
 import com.rmakiyama.yumenomemo.component.YumenomemoListView
 import com.rmakiyama.yumenomemo.model.Yumenomemo
 
@@ -32,6 +35,13 @@ private fun HomeScreen(
         modifier = Modifier.fillMaxSize(),
         color = MaterialTheme.colorScheme.background
     ) {
-        YumenomemoListView(list = yumenomemoList)
+        YumenomemoListView(
+            list = yumenomemoList,
+            contentPadding = rememberInsetsPaddingValues(
+                insets = LocalWindowInsets.current.systemBars,
+                additionalTop = 16.dp,
+                additionalBottom = 144.dp,
+            )
+        )
     }
 }
