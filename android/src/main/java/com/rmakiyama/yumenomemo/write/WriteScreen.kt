@@ -28,10 +28,8 @@ import com.rmakiyama.yumenomemo.component.NavigationBackIcon
 import com.rmakiyama.yumenomemo.write.WriteViewModel.Action.UpdateDetail
 import com.rmakiyama.yumenomemo.write.WriteViewModel.Action.UpdateImpression
 import com.rmakiyama.yumenomemo.write.WriteViewModel.Action.Write
-import kotlinx.coroutines.InternalCoroutinesApi
 import kotlinx.coroutines.flow.collect
 
-@InternalCoroutinesApi
 @Composable
 fun WriteScreen(
     navigateUp: () -> Unit,

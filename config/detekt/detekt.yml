@@ -1,0 +1,7 @@
+style:
+  ForbiddenComment:
+    active: false
+  MaxLineLength:
+    excludes: [ '**/*Test/**.kt' ]
+  MagicNumber:
+    excludes: [ '**/*Test/**.kt' ]

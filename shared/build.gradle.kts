@@ -3,6 +3,7 @@ plugins {
     kotlin("native.cocoapods")
     id("com.android.library")
     id("com.squareup.sqldelight")
+    id("io.gitlab.arturbosch.detekt")
 }
 
 version = "1.0"
