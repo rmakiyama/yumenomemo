@@ -53,6 +53,8 @@ junit = "junit:junit:4.13.2"
 
 androidx-test-junit = "androidx.test.ext:junit-ktx:1.1.3"
 
+detekt = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.19.0"
+
 [bundles]
 androidx = ["androidx-core", "androidx-lifecycle-runtime", "androidx-lifecycle-viewmodel"]
 compose = ["compose-ui", "compose-foundation", "compose-ui-tooling-preview", "compose-animation",
