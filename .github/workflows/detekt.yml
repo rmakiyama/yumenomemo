@@ -1,4 +1,4 @@
-name: detekt
+name: Check Code Quality
 
 on: pull_request
 
@@ -8,5 +8,10 @@ jobs:
     steps:
       - name: "checkout"
         uses: actions/checkout@v2
-      - name: "detekt"
-        uses: natiginfo/action-detekt-all@1.19.0
+      - name: detekt
+        uses: alaegin/Detekt-Action@v1.18.1.2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reviewdog_level: warning
+          reviewdog_reporter: github-pr-review
+          detekt_config: config/detekt/detekt.yml
