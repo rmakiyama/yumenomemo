@@ -66,6 +66,7 @@ private fun WriteScreen(
     onClickSave: () -> Unit,
     saveEnabled: Boolean,
 ) {
+    val hoge = "hoge"
     Surface(
         modifier = Modifier
             .fillMaxSize()
