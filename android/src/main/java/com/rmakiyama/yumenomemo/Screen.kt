@@ -7,4 +7,6 @@ sealed class Screen(val route: String) {
     object YumenomemoDetail : Screen("yumenomemo/{yumeId}") {
         fun createRoute(yumeId: YumeId): String = "yumenomemo/${yumeId.id}"
     }
+
+    object WriteYumenomemo : Screen("yumenomemo/new")
 }

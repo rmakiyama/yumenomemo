@@ -9,6 +9,7 @@ import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.composable
 import com.rmakiyama.yumenomemo.Screen
 import com.rmakiyama.yumenomemo.home.HomeScreen
+import com.rmakiyama.yumenomemo.write.WriteScreen
 
 @ExperimentalFoundationApi
 @ExperimentalAnimationApi
@@ -24,6 +25,12 @@ fun AppNavigation(
     ) {
         composable(Screen.Home.route) {
             HomeScreen()
+        }
+        composable(Screen.WriteYumenomemo.route) {
+            WriteScreen(
+                navigateUp = { navController.navigateUp() },
+                onWriteCompleted = { navController.navigateUp() },
+            )
         }
     }
 }
