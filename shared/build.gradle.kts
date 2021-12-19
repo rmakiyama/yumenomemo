@@ -1,9 +1,12 @@
+import co.touchlab.kermit.gradle.StripSeverity
+
 plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
     id("com.android.library")
     id("com.squareup.sqldelight")
     id("io.gitlab.arturbosch.detekt")
+    id("co.touchlab.kermit")
 }
 
 version = "1.0"
@@ -27,6 +30,7 @@ kotlin {
             dependencies {
                 implementation(libs.sqldelight.runtime)
                 api(libs.kotlinx.datetime)
+                api(libs.kermit)
             }
         }
         val commonTest by getting {
@@ -70,5 +74,13 @@ android {
 sqldelight {
     database("YumenomemoDatabase") {
         packageName = "com.rmakiyama.yumenomemo.db"
+    }
+}
+
+val releaseBuild: String by project
+
+kermit {
+    if (releaseBuild.toBoolean()) {
+        stripBelow = StripSeverity.Warn
     }
 }

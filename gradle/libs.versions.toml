@@ -9,6 +9,7 @@ accompanist = "0.21.4-beta"
 coil = "1.4.0"
 hilt = "2.40"
 sqldelight = "1.5.2"
+kermit = "1.0.0"
 
 compileSdk = "31"
 minSdk = "23"
@@ -48,6 +49,9 @@ sqldelight-pluginGradle = { module = "com.squareup.sqldelight:gradle-plugin", ve
 sqldelight-runtime = { module = "com.squareup.sqldelight:runtime", version.ref = "sqldelight" }
 sqldelight-android-driver = { module = "com.squareup.sqldelight:android-driver", version.ref = "sqldelight" }
 sqldelight-native-driver = { module = "com.squareup.sqldelight:native-driver", version.ref = "sqldelight" }
+
+kermit-pluginGradle = { module = "co.touchlab:kermit-gradle-plugin", version.ref = "kermit" }
+kermit = { module = "co.touchlab:kermit", version.ref = "kermit" }
 
 junit = "junit:junit:4.13.2"
 

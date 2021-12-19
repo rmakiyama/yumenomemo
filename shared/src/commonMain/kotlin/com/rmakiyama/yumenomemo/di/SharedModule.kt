@@ -1,5 +1,7 @@
 package com.rmakiyama.yumenomemo.di
 
+import co.touchlab.kermit.Logger
+import co.touchlab.kermit.platformLogWriter
 import com.rmakiyama.yumenomemo.core.Platform
 import com.rmakiyama.yumenomemo.datasource.DatasourceModule
 import com.rmakiyama.yumenomemo.datasource.YumenomemoDataSource
@@ -11,6 +13,10 @@ import com.rmakiyama.yumenomemo.usecase.WriteYumenomemo
 import com.rmakiyama.yumenomemo.usecase.WriteYumenomemoUseCase
 
 class SharedModule(val platform: Platform) {
+
+    init {
+        initLogger()
+    }
 
     private val datasourceModule: DatasourceModule = DatasourceModule()
 
@@ -24,4 +30,9 @@ class SharedModule(val platform: Platform) {
         get() = GetYumenomemoList(repository = yumenomemoRepository)
     val writeYumenomemo: WriteYumenomemoUseCase
         get() = WriteYumenomemo(repository = yumenomemoRepository)
+
+    private fun initLogger() {
+        Logger.setTag("Yumenomemo")
+        Logger.setLogWriters(platformLogWriter())
+    }
 }

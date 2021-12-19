@@ -10,6 +10,7 @@ buildscript {
         classpath(libs.hilt.android.pluginGradle)
         classpath(libs.sqldelight.pluginGradle)
         classpath(libs.detekt)
+        classpath(libs.kermit.pluginGradle)
     }
 }
 
