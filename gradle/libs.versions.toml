@@ -49,6 +49,8 @@ sqldelight-runtime = { module = "com.squareup.sqldelight:runtime", version.ref =
 sqldelight-android-driver = { module = "com.squareup.sqldelight:android-driver", version.ref = "sqldelight" }
 sqldelight-native-driver = { module = "com.squareup.sqldelight:native-driver", version.ref = "sqldelight" }
 
+kermit = "co.touchlab:kermit:1.0.0"
+
 junit = "junit:junit:4.13.2"
 
 androidx-test-junit = "androidx.test.ext:junit-ktx:1.1.3"

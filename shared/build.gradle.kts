@@ -27,6 +27,7 @@ kotlin {
             dependencies {
                 implementation(libs.sqldelight.runtime)
                 api(libs.kotlinx.datetime)
+                api(libs.kermit)
             }
         }
         val commonTest by getting {
